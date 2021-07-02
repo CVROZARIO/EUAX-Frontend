@@ -1,0 +1,23 @@
+<h3 class="mb-3">Projetos</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Data<br/>Início</th>
+            <th>Data<br/>Fim</th>
+            <th>Data de<br/>Cadastro</th>
+            <th>Remover</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let project of projects">
+            <td>{{project.id}}</td>
+            <td>{{project.name}}</td>
+            <td>{{project.dateBegin | date:'shortDate' }}</td>
+            <td>{{project.dateEnd | date:'shortDate' }}</td>
+            <td>{{project.createdTime | date:'medium' }}</td>
+            <td><button type="button" class="btn btn-danger btn-remove" (click)="deleteProject(project.id)" title="Remover registro">&times;</button></td>
+        </tr>
+    </tbody>
+</table>

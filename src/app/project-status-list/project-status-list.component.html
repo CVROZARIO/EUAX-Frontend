@@ -1,0 +1,25 @@
+<h3 class="mb-3">Status dos Projetos</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID Projeto</th>
+            <th>Nome Projeto</th>
+            <th>Data Início</th>
+            <th>Data Fim</th>
+            <th>Qtd. Atividades</th>
+            <th>% Completo</th>
+            <th>Atrasado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let projectStatus of projectStatuses">
+            <td>{{projectStatus.project.id}}</td>
+            <td>{{projectStatus.project.name}}</td>
+            <td>{{projectStatus.project.dateBegin | date:'shortDate' }}</td>
+            <td>{{projectStatus.project.dateEnd | date:'shortDate' }}</td>
+            <td>{{projectStatus.activityCount}}</td>
+            <td>{{projectStatus.percentFinished | number}}%</td>
+            <td>{{projectStatus.delayed === true ? 'Sim' : 'Não'}}</td>
+        </tr>
+    </tbody>
+</table>

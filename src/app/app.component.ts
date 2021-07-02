@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'EUAX-Frontend';
+  title = 'Euax: Consultoria em Gestão Empresarial com foco em Performance';
 }
